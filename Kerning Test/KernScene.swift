@@ -11,7 +11,7 @@ import SpriteKit
 class KernScene: SKScene {
 
   override func didMove(to view: SKView) {
-    
+    print("fluid change")
   }
 
 }
