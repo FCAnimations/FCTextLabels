@@ -16,5 +16,7 @@ class FeaturesScene: SKScene {
     gScene = self
     
     testHelloWord(forScene: self)
+      
+      print("testing merge")
     }
 }
