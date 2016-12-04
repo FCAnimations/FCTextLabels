@@ -17,6 +17,6 @@ class FeaturesScene: SKScene {
     
     testHelloWord(forScene: self)
       
-      print("testing merge ")
+      print("testing commit 2 ")
     }
 }
