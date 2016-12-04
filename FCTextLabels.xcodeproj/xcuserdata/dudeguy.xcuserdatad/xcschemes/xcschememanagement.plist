@@ -9,6 +9,16 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Kerning Test.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>console.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -18,6 +28,16 @@
 			<true/>
 		</dict>
 		<key>C14423AD1DF410AB009C25BC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C14423C41DF4157E009C25BC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C14423F81DF420F6009C25BC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
