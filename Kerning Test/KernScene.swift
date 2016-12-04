@@ -8,4 +8,10 @@
 
 import SpriteKit
 
-class KernScene: SKScene { }
+class KernScene: SKScene {
+
+  override func didMove(to view: SKView) {
+    
+  }
+
+}
