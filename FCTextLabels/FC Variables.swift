@@ -9,3 +9,4 @@
 import SpriteKit
 
 public var gScene: SKScene?
+public var gView: SKView?

@@ -19,12 +19,13 @@ class FeaturesScene: SKScene {
     // testHelloWord()
     // testHelloWordFromString()
     // testVertAlign()
-    // testVertAlignAll()
+     testVertAlignAll()
     // diagnoseKerning()
-
+/*
      let label = SKLabelNode(text: "hi there")
       let sprite = SKSpriteNode(texture: view.texture(from: label))
       sprite.position = CGPoint(0,0)
       addChild(sprite)
+ */
     }
 }

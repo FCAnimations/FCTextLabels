@@ -11,7 +11,7 @@ import SpriteKit
 
 
   // Compares the right one to the left one for each operation, then moves the right one:
-  func alignVert(_ nodeLeft: SKLabelNode, nodeRight: SKLabelNode) {
+  func alignVert(_ nodeLeft: SKSpriteNode, nodeRight: SKSpriteNode) {
     
     func calr_findPoint(diff: CGFloat, direction: String) -> CGFloat {
       switch direction {

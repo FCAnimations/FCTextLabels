@@ -12,7 +12,7 @@ import SpriteKit
 func testVertAlign() {
 
   // Compares the right one to the left one for each operation, then moves the right one:
-  func alignVert(_ nodeLeft: SKLabelNode, nodeRight: SKLabelNode) {
+  func alignVert(_ nodeLeft: SKSpriteNode, nodeRight: SKSpriteNode) {
     
     func findHeightDiff() -> CGFloat {
       return (abs(nodeLeft.height() - nodeRight.height()) / 2) / 2

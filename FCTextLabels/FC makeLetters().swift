@@ -111,18 +111,39 @@ public func makeSentence(letters: [Letter],
   // Make a rectangle to fit them all in?
   // Do we need to find the tallest letter to base the others on?
   
-  var lastHeight = letters[0].height()                                                    // <- We need a reference point for first iteration.
+  // var lastHeight = letters[0].height()                                                    // <- We need a reference point for first iteration.
   var nextPoint = point                                                                   // <- This is to be the bottom-right edge for the next letter
+  var letters2: [SKSpriteNode] = []
+  //let baseline = gScene!.childNode(withName: "baseline")?.frame
   
-  for letter in letters {
+  for letterL in letters {
+    let letter = SKSpriteNode(texture: gView!.texture(from: letterL))
+    letter.anchorPoint = CGPoint(0, 0)
+    letter.position = nextPoint
+    nextPoint = CGPoint(x: letter.frame.maxX,
+                        y: letter.frame.minY)
     
+    physics: do {
+
+      letter.physicsBody = SKPhysicsBody(texture: letter.texture!,
+                                         size: CGSize(width: letter.frame.width,
+                                                      height: letter.frame.height))
+      letter.physicsBody?.isDynamic = true
+      letter.physicsBody?.affectedByGravity = true
+ //letter.physicsBody?.isDynamic = true
+      //letter.physicsBody?.affectedByGravity = true
+      //print(letter.frame.intersects(baseline!))
+    }
+    
+    letters2.append(letter)
     scene.addChild(letter)
-    
+    return [letter]
     findWidth: do {
-      let width = letter.frame.width
-      letter.position = nextPoint
-      letter.position.x = nextPoint.x + ((width / 2) - 2)
-      nextPoint.x += width
+      /*
+       let width = letter.frame.width
+       letter.position.x = nextPoint.x + ((width / 2) - 2)
+       nextPoint.x += width
+       */
     }
     
     findHeight: do {/*
@@ -135,7 +156,7 @@ public func makeSentence(letters: [Letter],
     }
   }
   
-  return letters
+  return letters2
 }
 
 /* Placeholder:

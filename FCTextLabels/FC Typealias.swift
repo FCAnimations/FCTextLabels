@@ -11,4 +11,4 @@ import SpriteKit
 
 public typealias Letter = SKLabelNode
 public typealias Word   = SKShapeNode    // <- contains [Letter]
-public typealias Sentence = [SKLabelNode]  // <- contains [Word]
+public typealias Sentence = [SKSpriteNode]  // <- contains [Word]
