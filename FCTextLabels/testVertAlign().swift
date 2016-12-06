@@ -1,15 +1,14 @@
 //
-//  testStringToLetters.swift
+//  testVertAlign().swift
 //  FCTextLabels
 //
-//  Created by Dude Guy  on 12/4/16.
+//  Created by Dude Guy  on 12/6/16.
 //  Copyright © 2016 FC Animation. All rights reserved.
 //
 
 import SpriteKit
 
-
-func testAlignmentAdjust() {
+func testVertAlign() {
 
   // Compares the right one to the left one for each operation, then moves the right one:
   func alignVert(_ nodeLeft: SKLabelNode, nodeRight: SKLabelNode) {
@@ -20,11 +19,11 @@ func testAlignmentAdjust() {
     
     func findDirection() -> String {
       if nodeRight.position.y > nodeLeft.position.y {
-        return "down"
+        return "up"
       }
       
       else if nodeRight.position.y < nodeLeft.position.y {
-        return "up"
+        return "down"
       }
       
       else { return "none" }
@@ -42,7 +41,7 @@ func testAlignmentAdjust() {
     nodeRight.run(.move(by: vector, duration: 0))
   }
   
-  let sentence = makeSentence(letters: makeLetters(string: "Hello Word!"))
+  let sentence = makeSentence(letters: makeLetters(string: "eHllo Word!"))
     
   alignVert(sentence[0], nodeRight: sentence[1])
   

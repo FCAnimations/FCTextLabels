@@ -14,7 +14,8 @@ class FeaturesScene: SKScene {
     gScene = self
     
     // testHelloWord()
-      testHelloWordFromString() // makeSentence(letters: makeLetters("Hello Word!")
+    // testHelloWordFromString()
+      testVertAlign()
     
     }
 }

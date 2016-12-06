@@ -13,7 +13,7 @@ import SpriteKit
 
 func testHelloWordFromString() {
   
- let sentence = makeSentence(letters: makeLetters(string: "Hello Word!"))
+ let sentence = makeSentence(letters: makeLetters(string: "eHllo Word!"))
    sentence.last?.repeating([.rotate(byAngle: -3, duration: 0.5)])
 
 }
