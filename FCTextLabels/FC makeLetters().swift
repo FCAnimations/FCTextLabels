@@ -82,7 +82,7 @@ public func makeLetters(string: String) -> [Letter] {
     case "@": addLetter(letta: letter);    case "#": addLetter(letta: letter)
     case "$": addLetter(letta: letter);    case "%": addLetter(letta: letter)
     case "^": addLetter(letta: letter);    case "&": addLetter(letta: letter)
-    case "*": addLetter(letta: letter);     case "(": addLetter(letta: letter)
+    case "*": addLetter(letta: letter);    case "(": addLetter(letta: letter)
     case ")": addLetter(letta: letter);    case "-": addLetter(letta: letter)
     case "=": addLetter(letta: letter);    case "+": addLetter(letta: letter)
     case "_": addLetter(letta: letter);    case "{": addLetter(letta: letter)
