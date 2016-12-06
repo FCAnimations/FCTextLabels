@@ -6,4 +6,8 @@
 //  Copyright © 2016 FC Animation. All rights reserved.
 //
 
-print( testStringToLetters() )
+//print( testStringToLetters() )
+
+
+testStringToLetters(string: "hi")
+

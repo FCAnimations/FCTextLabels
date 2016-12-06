@@ -8,8 +8,7 @@
 
 import SpriteKit
 
-
-func makeLetter(_ string: String) -> Letter {
+public func makeLetter(_ string: String) -> Letter {
   
   let newLetter = SKLabelNode(text: string)
   /*
@@ -22,7 +21,7 @@ func makeLetter(_ string: String) -> Letter {
   return newLetter
 }
 
-func makeWord(letters:      [Letter],
+public func makeWord(letters:      [Letter],
               atPoint point: CGPoint = CGPoint(-300,300),
               inScene scene: SKScene = gScene!) {
   
@@ -55,12 +54,13 @@ func makeWord(letters:      [Letter],
   }
 }
 
-// Placeholder:
-private func makeSentence(words: [Word]) -> Sentence {
-  
-  func joinWord() {} // pairs of two?
-  
-  return Sentence()
-}
+/* Placeholder:
+  public func makeSentence(words: [Word]) -> Sentence {
+    
+    func joinWord() {} // pairs of two?
+    
+    return Sentence()
+  }
+*/
 
 

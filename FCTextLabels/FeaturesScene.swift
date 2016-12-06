@@ -7,8 +7,6 @@
 //
 import SpriteKit
 
-var gScene: SKScene?
-
 class FeaturesScene: SKScene {
 
     override func didMove(to view: SKView) {
