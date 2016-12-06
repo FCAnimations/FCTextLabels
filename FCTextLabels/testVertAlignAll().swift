@@ -8,10 +8,9 @@
 
 import SpriteKit
 
-<<<<<<< HEAD
-=======
+
+
 // FIXME: Clean-up some of the code I hotfixed  in the other files.
->>>>>>> master
 func testVertAlignAll() {
 
   // Compares the right one to the left one for each operation, then moves the right one:
@@ -25,6 +24,7 @@ func testVertAlignAll() {
       }
     }
     
+    // FIXME: Convert this to calculus:
     func pram_findHeightDiff() -> CGFloat {
       return (abs(nodeLeft.height() - nodeRight.height()) / 2) / 2
     }
@@ -59,24 +59,6 @@ func testVertAlignAll() {
   }
   
    alignAll(inSentence: makeSentence(letters: makeLetters(string: "Hello Word!")))
-<<<<<<< HEAD
-  
-  
-  /*
-  APPEARS TO BE WORKING:
-   let sentence = makeSentence(letters: makeLetters(string: "eHllo Word!"))
-  var num = 0
-  
-  alignVert(sentence[num], nodeRight: sentence[num + 1])
-  num += 1
-  
-  alignVert(sentence[0], nodeRight: sentence[2])
- */
-
-
-  
-=======
->>>>>>> master
 }
 
 
