@@ -156,10 +156,10 @@
 		C14423961DF410AA009C25BC /* FCTextLabels */ = {
 			isa = PBXGroup;
 			children = (
+				C14423EE1DF41840009C25BC /* FeaturesScene.swift */,
 				C14423991DF410AA009C25BC /* FeaturesScene.sks */,
 				C14423B11DF410AB009C25BC /* Unit Testing */,
 				C14423BF1DF41437009C25BC /* Other files */,
-				C14423EE1DF41840009C25BC /* FeaturesScene.swift */,
 				C14423F01DF41863009C25BC /* testHelloWord().swift */,
 				C1550D831DF6B0D300C84CBC /* testHelloWordFromString().swift */,
 				C1550D851DF6CA3300C84CBC /* testVertAlign().swift */,

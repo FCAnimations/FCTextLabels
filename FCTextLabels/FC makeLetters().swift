@@ -107,37 +107,71 @@ public func makeSentence(letters: [Letter],
               atPoint point: CGPoint = CGPoint(-300,300),
               inScene scene: SKScene = gScene!) -> Sentence {
   
-  // Maybe I can convert points? Compare differences in height /2?
-  // Make a rectangle to fit them all in?
-  // Do we need to find the tallest letter to base the others on?
-  
-  // var lastHeight = letters[0].height()                                                    // <- We need a reference point for first iteration.
   var nextPoint = point                                                                   // <- This is to be the bottom-right edge for the next letter
-  var letters2: [SKSpriteNode] = []
-  //let baseline = gScene!.childNode(withName: "baseline")?.frame
-  
-  for letterL in letters {
+  var sentence: Sentence = []
+
+  func doStuffToLetter(_ letterL: Letter, down: CGFloat = 0, left: CGFloat = 0) {
     let letter = SKSpriteNode(texture: gView!.texture(from: letterL))
     letter.anchorPoint = CGPoint(0, 0)
-    letter.position = nextPoint
-    nextPoint = CGPoint(x: letter.frame.maxX,
-                        y: letter.frame.minY)
     
-    physics: do {
+    letter.position = nextPoint
+    letter.position.x -= left
+    letter.position.y -= down
+    nextPoint = CGPoint(x: (letter.frame.maxX + left),
+                        y: (letter.frame.minY + down))
+    
 
-      letter.physicsBody = SKPhysicsBody(texture: letter.texture!,
-                                         size: CGSize(width: letter.frame.width,
-                                                      height: letter.frame.height))
-      letter.physicsBody?.isDynamic = true
-      letter.physicsBody?.affectedByGravity = true
+    sentence.append(letter)
+    scene.addChild(letter)
+  }
+  
+  for letterL in letters {
+
+    switch letterL.text! {
+    case letters[0].text!:     doStuffToLetter(letterL) // first letter always right position
+      
+      case "e","o": doStuffToLetter(letterL, down: 1)
+      case "l":     doStuffToLetter(letterL, down: 0)
+      case "d":     doStuffToLetter(letterL, down: 3)
+      default:      doStuffToLetter(letterL)
+    }
+
+
+  }
+
+  return sentence
+}
+
+/* Placeholder:
+  public func makeSentence(words: [Word]) -> Sentence {
+    
+    func joinWord() {} // pairs of two?
+    
+    return Sentence()
+  }
+*/
+
+/*
+ bad now:
+ 
+ // Maybe I can convert points? Compare differences in height /2?
+  // Make a rectangle to fit them all in?
+  // Do we need to find the tallest letter to base the others on?
+
+    //let baseline = gScene!.childNode(withName: "baseline")?.frame
+  // var lastHeight = letters[0].height()                                                    // <- We need a reference point for first iteration.
+
+ physics: do {
+//
+//      letter.physicsBody = SKPhysicsBody(texture: letter.texture!,
+//                                         size: CGSize(width: letter.frame.width,
+//                                                      height: letter.frame.height))
+//      letter.physicsBody?.isDynamic = true
+//      letter.physicsBody?.affectedByGravity = true
  //letter.physicsBody?.isDynamic = true
       //letter.physicsBody?.affectedByGravity = true
       //print(letter.frame.intersects(baseline!))
     }
-    
-    letters2.append(letter)
-    scene.addChild(letter)
-    return [letter]
     findWidth: do {
       /*
        let width = letter.frame.width
@@ -154,18 +188,7 @@ public func makeSentence(letters: [Letter],
       lastHeight = height
       nextPoint.y = letter.position.y*/
     }
-  }
-  
-  return letters2
-}
-
-/* Placeholder:
-  public func makeSentence(words: [Word]) -> Sentence {
-    
-    func joinWord() {} // pairs of two?
-    
-    return Sentence()
-  }
+ 
 */
 
 

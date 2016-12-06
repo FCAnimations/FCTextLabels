@@ -32,7 +32,6 @@ import SpriteKit
       else { return "none" }
     }
     
-    print(pram_findDirection())
     // FIXME: Are these any good?
     let point = calr_findPoint(diff: pram_findHeightDiff(), direction: pram_findDirection())
     nodeRight.position.y += point
@@ -58,7 +57,7 @@ import SpriteKit
 // FIXME: Clean-up some of the code I hotfixed  in the other files.
 func testVertAlignAll() {
 
-   alignAll(inSentence: makeSentence(letters: makeLetters(string: "Hello Word!")))
+   alignAll(inSentence: makeSentence(letters: makeLetters(string: "eeello Word!")))
   
 }
 
