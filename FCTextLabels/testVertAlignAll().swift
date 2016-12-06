@@ -8,6 +8,10 @@
 
 import SpriteKit
 
+<<<<<<< HEAD
+=======
+// FIXME: Clean-up some of the code I hotfixed  in the other files.
+>>>>>>> master
 func testVertAlignAll() {
 
   // Compares the right one to the left one for each operation, then moves the right one:
@@ -55,6 +59,7 @@ func testVertAlignAll() {
   }
   
    alignAll(inSentence: makeSentence(letters: makeLetters(string: "Hello Word!")))
+<<<<<<< HEAD
   
   
   /*
@@ -70,6 +75,8 @@ func testVertAlignAll() {
 
 
   
+=======
+>>>>>>> master
 }
 
 
