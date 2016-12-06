@@ -9,7 +9,7 @@
 import SpriteKit
 
 func diagnoseKerning() {
-  let newLetter = SKLabelNode(text: "Hello Word!")
+  let newLetter = SKLabelNode(text: "Word!")
   newLetter.fontSize = 24
   newLetter.verticalAlignmentMode = .baseline
   newLetter.horizontalAlignmentMode = .center

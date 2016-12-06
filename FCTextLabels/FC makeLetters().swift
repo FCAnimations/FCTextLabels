@@ -104,47 +104,30 @@ public func makeLetters(string: String) -> [Letter] {
 
 // FIXME: Refactor this in AppCode
 public func makeSentence(letters: [Letter],
-              atPoint point: CGPoint = CGPoint(-300,300),
+              atPoint point: CGPoint = CGPoint(-145, 100),
               inScene scene: SKScene = gScene!) -> Sentence {
   
   // Maybe I can convert points? Compare differences in height /2?
   // Make a rectangle to fit them all in?
   // Do we need to find the tallest letter to base the others on?
   
-  var lastHeight = letters[0].height()                                                    // <- We need a reference point for first iteration.
   var nextPoint = point                                                                   // <- This is to be the bottom-right edge for the next letter
   
   for letter in letters {
     
     scene.addChild(letter)
-    
     findWidth: do {
       let width = letter.frame.width
+      var modifiedWidth = CGFloat(0)
       letter.position = nextPoint
       letter.position.x = nextPoint.x + ((width / 2) - 2)
-      nextPoint.x += width
-    }
-    
-    findHeight: do {/*
-      let height = letter.frame.height
-      if height > lastHeight { letter.position.y += ((height - lastHeight) / 2) }
-      else if height < lastHeight { letter.position.y -= ((lastHeight - height) / 2) }
-      
-      lastHeight = height
-      nextPoint.y = letter.position.y*/
+      if letter.text! == "o" {
+        letter.position.x -= 10
+        modifiedWidth += 10
+      }
+      nextPoint.x += (width - modifiedWidth)
     }
   }
-  
+
   return letters
 }
-
-/* Placeholder:
-  public func makeSentence(words: [Word]) -> Sentence {
-    
-    func joinWord() {} // pairs of two?
-    
-    return Sentence()
-  }
-*/
-
-
