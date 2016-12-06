@@ -6,6 +6,8 @@
 //  Copyright © 2016 FC Animation. All rights reserved.
 //
 import SpriteKit
+import Foundation
+import UIKit
 
 class FeaturesScene: SKScene {
 
@@ -16,8 +18,9 @@ class FeaturesScene: SKScene {
     // testHelloWord()
     // testHelloWordFromString()
     // testVertAlign()
-     testVertAlignAll()
-      diagnoseKerning()
-    
+      testVertAlignAll()
+      // diagnoseKerning()
+
+      
     }
 }

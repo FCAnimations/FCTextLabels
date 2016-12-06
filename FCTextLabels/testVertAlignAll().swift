@@ -10,9 +10,6 @@ import SpriteKit
 
 
 
-// FIXME: Clean-up some of the code I hotfixed  in the other files.
-func testVertAlignAll() {
-
   // Compares the right one to the left one for each operation, then moves the right one:
   func alignVert(_ nodeLeft: SKLabelNode, nodeRight: SKLabelNode) {
     
@@ -58,7 +55,11 @@ func testVertAlignAll() {
              // which will set alignment for the rest of word
   }
   
+// FIXME: Clean-up some of the code I hotfixed  in the other files.
+func testVertAlignAll() {
+
    alignAll(inSentence: makeSentence(letters: makeLetters(string: "Hello Word!")))
+  
 }
 
 

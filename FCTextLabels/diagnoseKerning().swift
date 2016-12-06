@@ -9,10 +9,12 @@
 import SpriteKit
 
 func diagnoseKerning() {
-  let newLetter = SKLabelNode(text: "Hello World!")
+  let newLetter = SKLabelNode(text: "Hello Word!")
   newLetter.fontSize = 24
   newLetter.verticalAlignmentMode = .baseline
   newLetter.horizontalAlignmentMode = .center
   newLetter.setScale(5)
   gScene!.addChild(newLetter)
+  
+  //let z = SKTexture()
 }
