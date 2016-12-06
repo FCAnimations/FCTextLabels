@@ -16,7 +16,8 @@ class FeaturesScene: SKScene {
     // testHelloWord()
     // testHelloWordFromString()
     // testVertAlign()
-      testVertAlignAll()
+     testVertAlignAll()
+      diagnoseKerning()
     
     }
 }

@@ -8,6 +8,7 @@
 
 import SpriteKit
 
+// FIXME: Fuck!
 func testVertAlign() {
 
   // Compares the right one to the left one for each operation, then moves the right one:
