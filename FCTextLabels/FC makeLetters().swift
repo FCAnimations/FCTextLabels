@@ -102,14 +102,9 @@ public func makeLetters(string: String) -> [Letter] {
   return letters
 }
 
-// FIXME: Refactor this in AppCode
 public func makeSentence(letters: [Letter],
               atPoint point: CGPoint = CGPoint(-145, 100),
               inScene scene: SKScene = gScene!) -> Sentence {
-  
-  // Maybe I can convert points? Compare differences in height /2?
-  // Make a rectangle to fit them all in?
-  // Do we need to find the tallest letter to base the others on?
   
   var nextPoint = point                                                                   // <- This is to be the bottom-right edge for the next letter
   
