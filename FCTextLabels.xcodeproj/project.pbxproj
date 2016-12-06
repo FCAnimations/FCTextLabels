@@ -41,6 +41,8 @@
 		C1550D7A1DF6920500C84CBC /* FC Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1550D761DF6920500C84CBC /* FC Variables.swift */; };
 		C1550D821DF692BF00C84CBC /* FC makeLetters().swift in Sources */ = {isa = PBXBuildFile; fileRef = C14423EC1DF41811009C25BC /* FC makeLetters().swift */; };
 		C1550D841DF6B0D300C84CBC /* testHelloWordFromString().swift in Sources */ = {isa = PBXBuildFile; fileRef = C1550D831DF6B0D300C84CBC /* testHelloWordFromString().swift */; };
+		C18586971DF729A1001FA920 /* autoKern().swift in Sources */ = {isa = PBXBuildFile; fileRef = C18586961DF729A1001FA920 /* autoKern().swift */; };
+		C191331C1DF6F2D600AFEF0A /* diagnoseKerning().swift in Sources */ = {isa = PBXBuildFile; fileRef = C191331B1DF6F2D600AFEF0A /* diagnoseKerning().swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		C14424021DF421A2009C25BC /* FC Typealias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FC Typealias.swift"; sourceTree = "<group>"; };
 		C1550D761DF6920500C84CBC /* FC Variables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FC Variables.swift"; sourceTree = "<group>"; };
 		C1550D831DF6B0D300C84CBC /* testHelloWordFromString().swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "testHelloWordFromString().swift"; sourceTree = "<group>"; };
+		C18586961DF729A1001FA920 /* autoKern().swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "autoKern().swift"; sourceTree = "<group>"; };
+		C191331B1DF6F2D600AFEF0A /* diagnoseKerning().swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "diagnoseKerning().swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,12 +154,14 @@
 		C14423961DF410AA009C25BC /* FCTextLabels */ = {
 			isa = PBXGroup;
 			children = (
+				C14423EE1DF41840009C25BC /* FeaturesScene.swift */,
 				C14423991DF410AA009C25BC /* FeaturesScene.sks */,
 				C14423B11DF410AB009C25BC /* Unit Testing */,
 				C14423BF1DF41437009C25BC /* Other files */,
-				C14423EE1DF41840009C25BC /* FeaturesScene.swift */,
 				C14423F01DF41863009C25BC /* testHelloWord().swift */,
 				C1550D831DF6B0D300C84CBC /* testHelloWordFromString().swift */,
+				C191331B1DF6F2D600AFEF0A /* diagnoseKerning().swift */,
+				C18586961DF729A1001FA920 /* autoKern().swift */,
 			);
 			path = FCTextLabels;
 			sourceTree = "<group>";
@@ -385,8 +391,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C14423F11DF41863009C25BC /* testHelloWord().swift in Sources */,
+				C18586971DF729A1001FA920 /* autoKern().swift in Sources */,
 				C14423EF1DF41840009C25BC /* FeaturesScene.swift in Sources */,
 				C1550D841DF6B0D300C84CBC /* testHelloWordFromString().swift in Sources */,
+				C191331C1DF6F2D600AFEF0A /* diagnoseKerning().swift in Sources */,
 				C14423E11DF41685009C25BC /* Extensions.swift in Sources */,
 				C14423ED1DF41811009C25BC /* FC makeLetters().swift in Sources */,
 				C14423A01DF410AA009C25BC /* GameViewController.swift in Sources */,

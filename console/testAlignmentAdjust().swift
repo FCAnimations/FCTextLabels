@@ -10,19 +10,40 @@ import SpriteKit
 
 
 func testAlignmentAdjust() {
-  
-  let scene = SKScene(); scene.anchorPoint = CGPoint(0.5,0.5)
-  
-  
-  func hDiff(_ node1: SKLabelNode,_ node2: SKLabelNode) -> CGFloat {
-    return abs(node1.height() - node2.height()) / 2
+
+  // Compares the right one to the left one for each operation, then moves the right one:
+  func alignVert(_ nodeLeft: SKLabelNode, nodeRight: SKLabelNode) {
+    
+    func findHeightDiff() -> CGFloat {
+      return (abs(nodeLeft.height() - nodeRight.height()) / 2) / 2
+    }
+    
+    func findDirection() -> String {
+      if nodeRight.position.y > nodeLeft.position.y {
+        return "down"
+      }
+      
+      else if nodeRight.position.y < nodeLeft.position.y {
+        return "up"
+      }
+      
+      else { return "none" }
+    }
+    
+    func findVector(diff: CGFloat, direction: String) -> CGVector {
+      switch direction {
+      case "up":  return CGVector(dx: 0, dy: diff)
+      case "down": return CGVector(dx: 0, dy: -diff)
+      default: return CGVector(dx:0,dy:0)
+      }
+    }
+    
+    let vector = findVector(diff: findHeightDiff(), direction: findDirection())
+    nodeRight.run(.move(by: vector, duration: 0))
   }
   
-  
-  let sentence = makeSentence(letters: makeLetters(string: "Hello Word!"),
-                              inScene: scene)
-  
-  //sentence[1].position = CGPoint(x:-187,y:hDiff())
-  print(sentence.first!.position, sentence[0].frame.size)
+  let sentence = makeSentence(letters: makeLetters(string: "Hello Word!"))
+    
+  alignVert(sentence[0], nodeRight: sentence[1])
   
 }
