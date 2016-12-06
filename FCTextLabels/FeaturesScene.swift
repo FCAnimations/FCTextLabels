@@ -18,8 +18,9 @@ class FeaturesScene: SKScene {
     
     // testHelloWord()
     // testHelloWordFromString()
-    // testVertAlign()
-      testVertAlignAll()
+    
+    
+    makeSentence(letters: makeLetters(string: "Word"))
     diagnoseKerning()
 
     }

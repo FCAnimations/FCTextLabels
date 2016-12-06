@@ -122,8 +122,8 @@ public func makeSentence(letters: [Letter],
       letter.position = nextPoint
       letter.position.x = nextPoint.x + ((width / 2) - 2)
       if letter.text! == "o" {
-        letter.position.x -= 10
-        modifiedWidth += 10
+        letter.position.x -= 15
+        modifiedWidth += 15
       }
       nextPoint.x += (width - modifiedWidth)
     }
