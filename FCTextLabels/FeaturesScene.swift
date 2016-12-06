@@ -13,8 +13,8 @@ class FeaturesScene: SKScene {
     anchorPoint = CGPoint(0.5,0.5)
     gScene = self
     
-    testHelloWord(forScene: self)
-      
-      print("testing merge ")
+    // testHelloWord()
+      testHelloWordFromString() // makeSentence(letters: makeLetters("Hello Word!")
+    
     }
 }

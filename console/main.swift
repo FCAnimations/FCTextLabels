@@ -9,5 +9,5 @@
 //print( testStringToLetters() )
 
 
-testStringToLetters(string: "hi")
+testAlignmentAdjust()
 

@@ -24,7 +24,7 @@ func testHelloWord(forScene scene: SKScene = gScene!) {
     // No, the "l" is not supposed to be here.
     d = makeLetter("d")
     
-    makeWord(letters: [H,e,l,l2,o,__,w,o2,r,d]) // Arranges them on-screen.
+    makeSentence(letters: [H,e,l,l2,o,__,w,o2,r,d]) // Arranges them on-screen.
     
     animations: do {
     
