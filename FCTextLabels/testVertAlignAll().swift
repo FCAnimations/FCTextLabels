@@ -13,11 +13,11 @@ func testVertAlignAll() {
   // Compares the right one to the left one for each operation, then moves the right one:
   func alignVert(_ nodeLeft: SKLabelNode, nodeRight: SKLabelNode) {
     
-    func calr_findVector(diff: CGFloat, direction: String) -> CGVector {
+    func calr_findPoint(diff: CGFloat, direction: String) -> CGFloat {
       switch direction {
-      case "up":   return CGVector(dx: 0, dy: diff)
-      case "down": return CGVector(dx: 0, dy: -diff)
-      default:     return CGVector(dx: 0, dy: 0)
+      case "up":   return  diff
+      case "down": return  -diff
+      default:     return  0
       }
     }
     
@@ -31,9 +31,10 @@ func testVertAlignAll() {
       else { return "none" }
     }
     
+    print(pram_findDirection())
     // FIXME: Are these any good?
-    let vector = calr_findVector(diff: pram_findHeightDiff(), direction: pram_findDirection())
-    nodeRight.run(.move(by: vector, duration: 0))
+    let point = calr_findPoint(diff: pram_findHeightDiff(), direction: pram_findDirection())
+    nodeRight.position.y += point
   }
   
   // FIXME: Spaces ruin it
@@ -44,7 +45,7 @@ func testVertAlignAll() {
     func align(_ i: Int) {
       if i > max { return }
       else {
-        alignVert(sentence[i - 1], nodeRight: sentence[i])
+        alignVert(sentence[0], nodeRight: sentence[i])
         align(i + 1)
       }
     }
@@ -53,10 +54,21 @@ func testVertAlignAll() {
              // which will set alignment for the rest of word
   }
   
-   alignAll(inSentence: makeSentence(letters: makeLetters(string: "eHllo Word!")))
+   alignAll(inSentence: makeSentence(letters: makeLetters(string: "Hello Word!")))
   
-  let sentence = makeSentence(letters: makeLetters(string: "eHllo Word!"))
-  alignVert(sentence[0], nodeRight: sentence[1])
+  
+  /*
+  APPEARS TO BE WORKING:
+   let sentence = makeSentence(letters: makeLetters(string: "eHllo Word!"))
+  var num = 0
+  
+  alignVert(sentence[num], nodeRight: sentence[num + 1])
+  num += 1
+  
+  alignVert(sentence[0], nodeRight: sentence[2])
+ */
+
+
   
 }
 

@@ -17,7 +17,7 @@ public func makeLetter(_ string: String) -> Letter {
   /*
    newLetter.fontName = "Chalkduster" */
   newLetter.fontSize = 24
-  newLetter.verticalAlignmentMode = .center
+  newLetter.verticalAlignmentMode = .baseline
   newLetter.horizontalAlignmentMode = .center
   newLetter.setScale(5)
   
@@ -125,13 +125,13 @@ public func makeSentence(letters: [Letter],
       nextPoint.x += width
     }
     
-    findHeight: do {
+    findHeight: do {/*
       let height = letter.frame.height
       if height > lastHeight { letter.position.y += ((height - lastHeight) / 2) }
       else if height < lastHeight { letter.position.y -= ((lastHeight - height) / 2) }
       
       lastHeight = height
-      nextPoint.y = letter.position.y
+      nextPoint.y = letter.position.y*/
     }
   }
   
